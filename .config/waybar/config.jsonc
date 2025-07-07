@@ -9,21 +9,22 @@
   "spacing": 1,
   "reload_style_on_change": true,
 
+
+  "modules-left": [
+        "network",
+        "temperature",
+        "battery"
+    ],
+
   // Choose the order of the modules
-
-  "modules-left": ["niri/workspaces", "niri/window"],
-
   "modules-center": ["clock"],
 
   "modules-right": [
-    "network",
     // "cpu",
     // "memory",
-    "temperature",
     // "custom/temp",
-    "backlight",
-    "wireplumber",
-    "battery",
+        "backlight", 
+        "wireplumber",
     "group/custom-group",
   ],
 
