@@ -1,0 +1,141 @@
+/* fragile file path */
+/*@import url("../../.cache/wal/colors-waybar.css");*/
+
+/* Use Pywal16 colors  */
+@define-color bordercolor alpha(@color0, 1.0);
+@define-color bg alpha(@color2, 1.0);
+@define-color fg alpha(@foreground, 1.0);
+@define-color highlight alpha(@color15, 1.0);
+@define-color alert alpha(@color11, 1.0);
+@define-color disabled #A5A5A5;
+
+* {
+  min-height: 0;
+  font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+}
+
+window#waybar {
+  color: @fg;
+  background-color: @bg;
+  background: none;
+}
+
+/*River Tags/Workspaces*/
+#workspaces,
+#tags {
+  background-color: @bg;
+  color: @bordercolor;
+  border: 0.1rem solid @bordercolor;
+  border-radius: 1rem;
+  padding: 0rem 1rem;
+}
+
+#window.focused {
+  color: @bordercolor;
+  background-color: @bg;
+  border-radius: 1rem;
+  border: 0.1rem solid @bordercolor;
+  padding: 0rem 1rem;
+}
+
+#workspaces button,
+#tags button {
+  color: @bordercolor;
+  background: @bg;
+  padding: 0rem 0.2rem;
+  margin: 0rem 0.2rem;
+}
+
+#tags button.occupied {
+  color: @bordercolor;
+}
+
+#tags button.focused {
+  color: @highlight;
+}
+
+#tags button.urgent {
+  color: @alert;
+}
+
+#clock,
+#cava,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#language,
+#backlight,
+#backlight-slider,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#taskbar,
+#tray,
+#tray menu,
+#tray > .needs-attention,
+#tray > .passive,
+#tray > .active,
+#mode,
+#scratchpad,
+#custom-notification,
+#custom-temp,
+#custom-wifi,
+#custom-kdeconnect,
+#custom-bluetooth,
+#custom-power,
+#custom-separator,
+#custom-group,
+#idle_inhibitor,
+#window,
+#mpd {
+  color: @bordercolor;
+  background-color: @bg;
+  border-radius: 1rem;
+  border: 0.1rem solid @bordercolor;
+  padding: 0rem 0.8rem;
+  margin: 0rem 0.2rem;
+}
+
+#tray menu,
+#tray > .needs-attention,
+#tray > .passive,
+#tray > .active,
+#tray,
+#custom-notification,
+#custom-wifi,
+#custom-kdeconnect,
+#custom-bluetooth,
+#custom-power,
+#idle_inhibitor {
+  padding: 0rem 0.2rem;
+  margin: 0rem 0.2rem;
+  border: 0rem solid @bordercolor;
+}
+
+#custom-group {
+  padding: 0.2rem 1rem;
+  margin-right: 0rem;
+}
+
+#custom-separator {
+  color: @disabled;
+}
+
+#network.disconnected,
+#pulseaudio.muted,
+#wireplumber.muted {
+  color: @alert;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: @activegreen;
+}
+
+label:focus {
+  background-color: @bg;
+}
