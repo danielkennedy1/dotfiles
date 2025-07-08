@@ -1,5 +1,9 @@
 *
 !.gitignore
+
 !.config/
 !.config/waybar/
 !.config/waybar/*
+
+!scripts/
+!scripts/wallpaper.sh
