@@ -13,3 +13,5 @@
 !scripts/wallpaper.sh
 
 
+!nixos-config/
+!nixos-config/*
