@@ -4,6 +4,8 @@
 !.bash_profile
 !.bashrc
 
+!.tmux.conf
+
 !.config/
 !.config/hypr/
 !.config/hypr/*
