@@ -1,6 +1,9 @@
 *
 !.gitignore
 
+!.bash_profile
+!.bashrc
+
 !.config/
 !.config/hypr/
 !.config/hypr/*
@@ -11,7 +14,6 @@
 
 !scripts/
 !scripts/wallpaper.sh
-
 
 !nixos-config/
 !nixos-config/*
