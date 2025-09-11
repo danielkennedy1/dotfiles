@@ -9,6 +9,8 @@
 !.config/
 !.config/hypr/
 !.config/hypr/*
+!.config/kanshi/
+!.config/kanshi/*
 !.config/nvim/
 !.config/nvim/*
 !.config/waybar/

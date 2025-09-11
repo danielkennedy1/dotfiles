@@ -38,6 +38,8 @@ plugins=(
 
 source "$OSH"/oh-my-bash.sh
 
+[[ -f ~/.bash_aliases.sh ]] && source ~/.bash_aliases.sh
+
 export LANG=en_IE.UTF-8
 
 export SSH_KEY_PATH="~/.ssh/rsa_id"
@@ -49,3 +51,4 @@ export PATH="/home/daniel/.local/bin:$PATH"
 
 # Cargo
 export PATH="$PATH:$HOME/.cargo/bin"
+
