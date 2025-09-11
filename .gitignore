@@ -15,7 +15,7 @@
 !.config/waybar/*
 
 !scripts/
-!scripts/wallpaper.sh
+!scripts/*.sh
 
 !nixos-config/
 !nixos-config/*
