@@ -1,8 +1,9 @@
 *
 !.gitignore
 
-!.bash_profile
 !.bashrc
+!.bash_profile
+!.bash_aliases
 
 !.tmux.conf
 

@@ -10,10 +10,8 @@ OSH_THEME="font"
 OMB_HYPHEN_SENSITIVE="false"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-
 OMB_USE_SUDO=true
-
-OMB_PROMPT_SHOW_PYTHON_VENV=true  # enable
+OMB_PROMPT_SHOW_PYTHON_VENV=true
 
 completions=(
   git
@@ -41,14 +39,7 @@ source "$OSH"/oh-my-bash.sh
 [[ -f ~/.bash_aliases.sh ]] && source ~/.bash_aliases.sh
 
 export LANG=en_IE.UTF-8
-
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-alias vim=nvim
-
-# uv
-export PATH="/home/daniel/.local/bin:$PATH"
-
-# Cargo
-export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="/home/daniel/.local/bin:$PATH" # uv
+export PATH="$PATH:$HOME/.cargo/bin" # cargo
 
