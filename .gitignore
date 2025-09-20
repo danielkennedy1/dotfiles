@@ -6,18 +6,26 @@
 
 !.tmux.conf
 
+
 !.config/
+
 !.config/hypr/
 !.config/hypr/*
-!.config/kanshi/
-!.config/kanshi/*
+
 !.config/nvim/
 !.config/nvim/*
+
 !.config/waybar/
 !.config/waybar/*
 
+!.config/wofi/
+!.config/wofi/*
+
+
 !scripts/
+
 !scripts/*.sh
+
 
 !nixos-config/
 !nixos-config/*
