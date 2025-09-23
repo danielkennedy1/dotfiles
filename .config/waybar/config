@@ -6,8 +6,8 @@
     "passthrough": false,
     "gtk-layer-shell": true,
     "height": 36,
-    "margin-right": 5,
-    "margin-left": 5, 
+    "margin-right": 2,
+    "margin-left": 2, 
 
     "modules-left": [
         "custom/rofi",
@@ -59,8 +59,8 @@
                 "sterminal": "",
                 "wezterm": "",
                 "kitty": "",
-                "chrome": "🌐",
-                "claude": "✱",
+                "chrome": "",
+                "claude": "󱉋",
                 "class<wezterm> title<vim.*>": "",
                 "class<UnrealEditor> title<.+>": "<span font_size='10pt'>󰦱</span>",
                 "class<UnrealEditor> title<>": "",
@@ -148,8 +148,8 @@
         "format": "{icon}",
         "format-muted": "",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-        "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+",
-        "on-scroll-down": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-",
+        "on-scroll-down": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-",
         "scroll-step": 5,
         "format-icons": {
             "headphone": "",
@@ -178,10 +178,11 @@
 
     "backlight": {
         "device": "intel_backlight",
-        "format": "{icon} {percent}%",
+        "format": "{icon} {percent:02d}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
         "on-scroll-up": "brightnessctl -e4 -n2 set 5%+",
-        "on-scroll-down": "brightnessctl -e4 -n2 set 5%-"
+        "on-scroll-down": "brightnessctl -e4 -n2 set 5%-",
+        "min-width": 10,
     },
 
     "custom/weather": {
