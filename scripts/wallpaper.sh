@@ -3,8 +3,10 @@
 temp_rss="/tmp/nasa_rss.xml"
 wget -qO "$temp_rss" https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss
 
-# Extract first image URL matching the pattern
-image_url=$(grep -o 'https://www\.nasa\.gov/wp-content/uploads/[^"]*\.jpg' "$temp_rss" | head -1)
+line_number=${1:-1}
+
+# Extract image URL matching the pattern
+image_url=$(grep -o 'https://www\.nasa\.gov/wp-content/uploads/[^"]*\.jpg' "$temp_rss" | head -"$line_number" | tail -1)
 
 # Clean up RSS file
 rm -f "$temp_rss"
