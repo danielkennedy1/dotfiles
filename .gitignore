@@ -23,6 +23,9 @@
 !.config/wofi/**
 
 
+!.config/kitty/
+!.config/kitty/**
+
 !scripts/
 
 !scripts/*.sh
