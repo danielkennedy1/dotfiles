@@ -11,16 +11,16 @@
 !.config/
 
 !.config/hypr/
-!.config/hypr/*
+!.config/hypr/**
 
 !.config/nvim/
-!.config/nvim/*
+!.config/nvim/**
 
 !.config/waybar/
-!.config/waybar/*
+!.config/waybar/**
 
 !.config/wofi/
-!.config/wofi/*
+!.config/wofi/**
 
 
 !scripts/

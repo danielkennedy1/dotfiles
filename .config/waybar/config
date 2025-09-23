@@ -1,0 +1,214 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 36,
+    "margin-right": 5,
+    "margin-left": 5, 
+
+    "modules-left": [
+        "custom/rofi",
+
+        "cpu",
+        "memory",
+        "network",
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "hyprland/workspaces",
+
+        "pulseaudio",
+        "pulseaudio#microphone",
+        "battery",
+        "backlight",
+
+        "custom/lock_screen",
+    ],
+
+    "custom/rofi": {
+        "format": " ",
+        "tooltip": false
+    },
+
+    "custom/lock_screen": {
+        "format": "",
+        "on-click": "hyprlock",
+        "tooltip": false
+    },
+
+ "hyprland/workspaces": {
+        "on-click": "activate",
+        "disable-scroll": true,
+        "persistent-workspaces": {
+            "*": [ 1, 2, 3, 4 ],
+        },
+            "all-outputs": false,    
+            "format": "{name} <span font_size='8pt'>{windows}</span>",
+            "show-special": true,
+            "special-visible-only": true,
+               "window-rewrite-default": "",
+            "window-rewrite": {
+                "class<firefox>": "",
+                "sterminal": "",
+                "wezterm": "",
+                "kitty": "",
+                "chrome": "🌐",
+                "claude": "✱",
+                "class<wezterm> title<vim.*>": "",
+                "class<UnrealEditor> title<.+>": "<span font_size='10pt'>󰦱</span>",
+                "class<UnrealEditor> title<>": "",
+                "class<io.github.achetagames.epic_asset_manager>": " ",
+                "obsidian": "󰠮",
+                "code": "󰨞",
+                "title<btop>": "󰊚",
+                "KeePassXC": "",
+                "Spotify":"🎶", 
+                "Rofi": "",
+                "music": "","nautilus": "","Qalculate!": "", "com.stremio.stremio": "󱜅", 
+                "steam": "","discord": " ","heroic": "",
+                "hl2_linux": "",
+                "class<Minecraft Launcher": "",
+                    "class<(Minecraft\\s\\d\\.\\d+\\.\\d+)>": "",
+                "class<(steam_proton)>": "",
+                "class<(steam_app_.*)>": ""
+            } 
+
+        },
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 12,
+        "all-outputs": true,
+        "tooltip-format": "{name}: {title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+            "rofi"
+         ]
+    },
+
+    "tray": {
+        "icon-size": 12,
+        "spacing": 10
+    },
+
+    "cpu": {
+        "interval": 1,
+        "format": " {usage:02d}%",
+        "max-length": 5,
+        "min-length": 5
+    },
+
+    "memory": {
+        "interval": 1,
+        "format": " {used:0.1f}GB",
+        "max-length": 7,
+        "min-length": 7
+    },
+    
+    "disk": {
+        "interval": 600,
+        "path": "/",
+        "format": "󰋊 {used} / {total}",
+    },
+
+    "temperature": {
+        "thermal-zone": 1,
+        "format": " {temperatureC}°C",
+        "critical-threshold": 70,
+        "format-critical": " {temperatureC}°C",
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon}",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt-click": "click-right",
+        "format-alt": "{icon} {capacity}%",
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "tooltip": true,
+        "tooltip-format": "{icon} at {volume}%"
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": "",
+        "format-source-muted": "",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SOURCE@ 5%+",
+        "on-scroll-down": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SOURCE@ 5%-",
+        "scroll-step": 5,
+        "tooltip": true,
+        "tooltip-format": " at {volume}%"
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-scroll-up": "brightnessctl -e4 -n2 set 5%+",
+        "on-scroll-down": "brightnessctl -e4 -n2 set 5%-"
+    },
+
+    "custom/weather": {
+        //shows the current weather and forecast
+        "tooltip" : true,
+        "format" : "{}",
+        "interval" : 3600,
+        "exec" : "~/.config/waybar/scripts/wttr.py",
+        "return-type" : "json"
+    },
+
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "  {essid}",
+        "format-ethernet": " ",
+        "format-disconnected": " ", //An empty format will hide the module.
+        "tooltip-format": " {ifname} via {gwaddr}",
+        "tooltip-format-wifi": " {essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": " {ifname} {ipaddr}/{cidr}",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    },
+
+    "clock": {
+        "interval": 1,
+        "timezone": "Dublin/Ireland",
+        "format": "{:L%A %d/%m/%y - %I:%M:%S %p}",
+        "tooltip": true,
+    }
+}
