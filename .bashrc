@@ -31,7 +31,7 @@ aliases=(
 plugins=(
   git
   bashmarks
-  tmux-autoattach
+  #tmux-autoattach
 )
 
 source "$OSH"/oh-my-bash.sh
@@ -42,4 +42,4 @@ export LANG=en_IE.UTF-8
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 export PATH="/home/daniel/.local/bin:$PATH" # uv
 export PATH="$PATH:$HOME/.cargo/bin" # cargo
-
+export LD_LIBRARY_PATH=/run/opengl-driver/lib:$LD_LIBRARY_PATH # cuda
